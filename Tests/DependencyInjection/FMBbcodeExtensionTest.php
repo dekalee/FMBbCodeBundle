@@ -10,8 +10,9 @@ namespace FM\BbcodeBundle\Tests\DependencyInjection;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use FM\BbcodeBundle\DependencyInjection\FMBbcodeExtension;
 use Symfony\Component\Yaml\Parser;
+use PHPUnit\Framework\TestCase;
 
-class FMBbcodeExtensionTest extends \PHPUnit_Framework_TestCase
+class FMBbcodeExtensionTest extends TestCase
 {
     /**
      * @var \Symfony\Component\DependencyInjection\ContainerBuilder
@@ -52,7 +53,7 @@ class FMBbcodeExtensionTest extends \PHPUnit_Framework_TestCase
 
     protected function getFullConfig()
     {
-        $yaml = <<<EOF
+        $yaml = <<<'EOF'
 filter_sets:
     forum_post_filter:
         locale: ru
